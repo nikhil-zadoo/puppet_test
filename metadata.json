@@ -1,0 +1,18 @@
+{
+  "name": "nikhil-test",
+  "version": "0.1.0",
+  "author": "nikhil zadoo",
+  "summary": "random testing",
+  "license": "Apache-2.0",
+  "source": "https://github.com/nikhil-zadoo/puppet_test.git",
+  "project_page": "https://github.com/nikhil-zadoo/puppet_test",
+  "issues_url": "https://github.com/nikhil-zadoo/puppet_test/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 1.0.0"
+    }
+  ],
+  "data_provider": null
+}
+
