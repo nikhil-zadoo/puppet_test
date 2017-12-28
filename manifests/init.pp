@@ -42,7 +42,11 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class test {
-
-
+class test (
+  String $package_name = $::test::params::package_name,
+  String $service_name = $::test::params::service_name,
+) inherits ::test::params {
+  class { '::test::install': } ->
+  class { '::test::service': }
+  notify { 'I AM InSiDE TEST': }
 }
