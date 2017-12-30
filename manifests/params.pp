@@ -1,4 +1,5 @@
 class test::params {
+  $permit_root_login = 'yes'
   case $facts['os']['family'] {
     'Debian': {
       $package_name = 'openssh-server'

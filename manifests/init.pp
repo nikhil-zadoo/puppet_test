@@ -43,10 +43,14 @@
 # Copyright 2017 Your name here, unless otherwise noted.
 #
 class test (
-  String $package_name = $::test::params::package_name,
-  String $service_name = $::test::params::service_name,
-) inherits ::test::params {
-  class { '::test::install': } ->
+  String $package_name,
+  String $service_name,
+  String $permit_root_login,
+  String $ensure,
+  ){
   class { '::test::service': }
+  class { '::test::install': }
+  class { '::test::config': }
+  Class['::test::install'] -> Class['::test::config'] -> Class['::test::service']
   notify { 'I AM InSiDE TEST': }
 }
